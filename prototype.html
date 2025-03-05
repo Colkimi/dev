@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+     <meta  name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>
+		GENIUS
+	</title>
+	<style>
+
+		.container{
+			width:100%;
+			display:flex;
+			align-items: flex-start;
+		}
+		.box{
+			width:40%;
+			display: inline-block;
+		}
+		.box2{
+			width:50%;
+			display: inline-block;
+		}
+		body{
+			background-color:#6d7c92;
+		}
+		select{
+			background-color: #667599;
+		}
+		input{
+			padding:5px;
+		}
+		hr{
+			height: 10px;  
+            background-color:#6d7c92;  
+            border: none; 
+		}
+		img {
+  border:none;
+  padding: 5px;
+  width: 150px;
+  margin-top: 0px;
+  border-style:none;
+}
+#polaroid {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom:20px;
+  height:15rem;
+}
+#contain{
+	text-align: center;
+	margin-bottom: 0px;
+	background-color:black; 
+}
+.slideshow-thing{
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.mib {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#colkimi{
+display: block;
+}
+#services{
+display: none;
+}#pay{
+display:none;
+}#testify{
+display: none;
+}#asking{
+display:none;
+}#phone{
+display: none;
+}#aboutus{
+display: none;
+}
+::placeholder{
+	color:white;
+	font-size:15px;
+}
+#loginFormContainer {
+     display: none;
+     width: 96%;
+     border: 5px solid green;
+     background-color: orange;
+     padding: 0px 0px 300px 50px;
+        }
+#signUpContainer {
+    display: none;
+    width: 96%;
+    border: 5px solid orange;
+    background-color: green;
+    padding: 0px 0px 300px 50px;
+        }
+	.container2{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	.text{
+		color:white;
+		font-family: sans-serif;
+		font-size: 28px;
+	}
+	.ring{
+		position: absolute;
+		width: 190px;
+		height: 190px;
+		border:1px solid transparent;
+		border-radius: 50%;
+		--color: #ff8df9;
+		border-bottom: 8px solid var(--color);
+		animation:rotate1 2s linear infinite;
+	}
+	@keyframes rotate1{
+     from{
+     	transform:rotateX(50deg) rotateZ(110deg);
+     }
+       to{
+     	transform:rotateX(50deg) rotateZ(470deg);
+     }
+	}
+
+.ring:nth-child(2) {
+  --color: #ff416a;
+  animation-name: rotate2;
+}
+@keyframes rotate2{
+   from{
+     	transform:rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+     }	
+to{
+	transform:rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+}
+}
+.ring:nth-child(3) {
+  color: #00ffff;
+  animation-name: rotate3;
+}
+@keyframes rotate3{
+   from{
+     	transform:rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+     }	
+to{
+	transform:rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+}
+}
+.ring:nth-child(4) {
+  --color: #fcb737;
+  animation-name: rotate4;
+}
+@keyframes rotate4{
+   from{
+     	transform:rotateX(70deg) rotateZ(270deg);
+     }	
+to{
+	transform:rotateX(70deg) rotateZ(630deg);
+}
+}
+.ring:nth-child(5) {
+  --color: red;
+  animation-name: rotate5;
+}
+@keyframes rotate5{
+   from{
+     	transform:rotateX(200deg) rotateZ(300deg);
+     }	
+to{
+	transform:rotateX(200deg) rotateZ(700deg);
+}
+}
+.ring:nth-child(6) {
+  --color: orange;
+  animation-name: rotate6;
+}
+@keyframes rotate6{
+   from{
+     	transform:rotateX(300deg) rotateZ(400deg);
+     }	
+to{
+	transform:rotateX(300deg) rotateZ(800deg);
+}
+}
+
+	</style>
+</head>
+<link rel="icon" href="https://t4.ftcdn.net/jpg/04/53/29/17/360_F_453291780_nJFua3Z4gNK4BGvbBUxkbm6TUspYnZmF.jpg" type="image/x-icon">
+<body > 
+	<div class="container2" id="mimi">
+	<div class="ring"></div>
+	<div class="ring"></div>
+	<div class="ring"></div>
+	<div class="ring"></div>
+	<div class="ring"></div>
+	<div class="ring"></div>
+	<div class="text">Genius</div>
+</div>	
+  <div style="background-color:black;color:grey;padding: 5px;padding-right: 0px;" class="container">
+	<div class="box2" style="font-size: 50px;color:white;">
+		WELCOME TO GENIUS<br>
+		<span style="background-color:#2839d7;font-size:20px;margin-left:130px;padding:0px;">KENYA</span>
+	</div>	
+<div class="box">		
+<p align="right" style="padding-right:450px;margin-bottom: 10px;padding-bottom: 0px;">Language</p>
+<form id="login" align="right" style="padding:0px" method="post">
+<input type="text" maxlength="10" id="number" name="number" placeholder="Mobile" style="background-color:#170908;color:white" required>
+<input type="password" id="password" name="password" placeholder="password" style="background-color:#170908;color:white;" required>
+<input type="button" value="LOGIN" style="margin-right:15px;color:white;background-color:#6a8195;border-style:hidden;font-weight:800;">
+<input type="button" value="REGISTER" style="color:white;background-color:#1789e8;border-radius:5px;border-style:hidden;font-weight:800;">
+</form>
+<p align="right">
+	&#63;
+ <a href=phoneLogin() style="color:grey;"> Already using our website? – Forgot your password?</a>
+</p>
+</div>
+<span style="color:orange;">by @colkimi</span>
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%" >
+<input type="button" value="HOME" style="border:none;background-color: white;" onclick="home()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%">
+<input type="button" value="SERVICES" style="border:none;background-color: white;" onclick="services()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%" >
+<input type="button" value="PAYMENT" style="border:none;background-color: white;" onclick="payment()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%" >
+<input type="button" value="TESTIMONIALS" style="border:none;background-color: white;" onclick="testimonials()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%" >
+<input type="button" value="FAQS" style="border:none;background-color: white;" onclick="faqs()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:15%" >
+<input type="button" value="CONTACT US" style="border:none;background-color: white;" onclick="contact()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%" >
+<input type="button" value="ABOUT US" style="border:none;background-color: white;" onclick="about()">
+</div>
+<div class="box2" style="color:black;background-color: grey;width:10%" >
+<input type="button" value="login" style="border:none;background-color: white;" onclick="login()">
+</div>
+<div class="container" style="color:white;text-align:center;width:100%;background-color:grey;">
+	<!--<div class="box" style="width:2.6%;">-->
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSnk98kN9NHJLZLvj2MK7YXGSGP6-zJ7ENHKv6I7Nsg&s" style="width: 35px;height: 38px;border-radius:10px 0px 0px 10px;margin-right: 0px;">
+<!--</div>
+<div class="box" style="margin-top:5px;">-->
+<input  type="text" placeholder="search" style="padding-right:400px;border-radius:0px 10px 10px 0px;padding-left: 20px;padding-top: 10px;padding-bottom: 10px;background-color: black;margin-top:5px;margin-left: -5px;">
+<!--</div>-->
+</div>
+<div id="colkimi">
+<div class="container">
+	<div class="box" style="width:15%;margin-right: 20px;">
+<div id="polaroid">
+	<div id="contain">
+	<p style="font-size: 1.7rem;color:white">Our logo</p>
+</div>
+<img src="https://t4.ftcdn.net/jpg/04/53/29/17/360_F_453291780_nJFua3Z4gNK4BGvbBUxkbm6TUspYnZmF.jpg">
+</div>
+</div>	
+	<div class="box" style="width:60%;margin-right: 20px;">
+<div class="slideshow-thing">
+    <div class="mib fade">
+      <img src="https://cdn.vox-cdn.com/thumbor/NDU8piY097oO5a0GyY_jSVPEcAY=/0x0:640x457/1400x788/filters:focal(320x228:321x229)/cdn.vox-cdn.com/uploads/chorus_asset/file/14774717/genius.0.1410962927.jpg" style="border:none;padding: 5px;width: 100%;margin-top: 0px;height: 400px;">
+    </div>
+    <div class="mib fade">
+      <img src="https://www.rollingstone.com/wp-content/uploads/2019/06/genius.png" style="border:none;padding: 5px;width: 100%;margin-top: 0px;height: 400px;">
+    </div>
+    <div class="mib fade">
+      <img src="https://national.cc/images/series/Genius_Main_Title_1x1.jpeg" style="border:none;padding: 5px;width: 100%;margin-top: 0px;height: 400px;">
+    </div>
+  </div>
+</div>
+<div class="box" style="width:20%;font-size:22px;color:white;background-color:darkblue;padding:20px;">
+	Step into a world where you don't have to struggle to come into terms with a website that perfectly suits you. <br><br>Whether you're here to learn, explore, connect or have a website created for you within minutes,we're thrilled to have you join our community.
+</div>
+</div>
+<h1 style="background-color:grey;">MISSION</h1>
+<p style="font-size:22px;color:black;">
+At GENIUS, we believe in <b>perfectness</b> when it comes to matters of website handling. <br><br>Our platform is designed to manage tasks at different levels of complexity and educate everyone on creation of websites and interfaces.We are much key-in to helping students in the related field.However,whether you're a student, professional,hobbyist or a company manager we have something special in store for you.
+</p>
+<h1 style="background-color:brown;">VISION</h1>
+<p style="font-size:22px;color:orange;background-color: black;">
+	To create websites that align with clients' expectations and give a thrilling adventure to users of the same
+<br>
+Explore our various tabs to discover a wealth of content,products and services. From Services to testimonials, there's always something new to uncover.
+<br>
+Join us on this journey of making you a Genius. We're here to provide ana interactive approach to everyone.Together, let's share ideas, learn and most importantly create.
+<br>
+Thank you for choosing GENIUS. Let's embark on this exciting adventure together!
+</p><p style="font-size:22px;color:brown;background-color:black">
+Warmest regards,
+<br>
+GENIUS	
+</p>
+<embed width="100%" height="345" src="https://www.youtube.com/embed/XhP3Xh4LMA8?autoplay=1&mute=1">
+</embed>
+</div>
+<script>
+function home(){
+	    document.getElementById('colkimi').style.display = "block";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "none";
+        document.getElementById('signUpContainer').style.display = "none";
+}  
+function services(){
+		document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "block";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "none";
+         document.getElementById('signUpContainer').style.display = "none";
+	}
+	function payment(){
+		document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "block";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "none";
+         document.getElementById('signUpContainer').style.display = "none";
+	}
+	function testimonials(){
+		document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "block";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "none";
+         document.getElementById('signUpContainer').style.display = "none";
+	}
+	function faqs(){
+	    document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "block";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "none";
+         document.getElementById('signUpContainer').style.display = "none";
+         document.getElementById('mimi').style.display = "none";
+	}
+	function contact(){
+		document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "block";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "none";
+         document.getElementById('signUpContainer').style.display = "none";
+	}
+		function about(){
+		document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "block";
+        document.getElementById('loginFormContainer').style.display = "none";
+         document.getElementById('signUpContainer').style.display = "none";
+     
+	}
+	function login(){
+		document.getElementById('colkimi').style.display = "none";
+        document.getElementById('services').style.display = "none";
+        document.getElementById('pay').style.display = "none";
+        document.getElementById('testify').style.display = "none";
+        document.getElementById('asking').style.display = "none";
+        document.getElementById('phone').style.display = "none";
+        document.getElementById('aboutus').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "block";
+         document.getElementById('signUpContainer').style.display = "none";
+
+	}
+
+</script>
+  <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var slides = document.getElementsByClassName("mib");
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="services">
+	<div class="slideshow-thing">
+    <div class="mib fade" style="display:inline-flex;">
+      <img src="https://cdn.vox-cdn.com/thumbor/NDU8piY097oO5a0GyY_jSVPEcAY=/0x0:640x457/1400x788/filters:focal(320x228:321x229)/cdn.vox-cdn.com/uploads/chorus_asset/file/14774717/genius.0.1410962927.jpg" style="border:none;padding: 5px;width: 100%;margin-top: 0px;height: 400px;">
+    </div>
+    <div class="mib fade">
+      <img src="https://www.rollingstone.com/wp-content/uploads/2019/06/genius.png" style="border:none;padding: 5px;width: 100%;margin-top: 0px;height: 400px;">
+    </div>
+    <div class="mib fade">
+      <img src="https://national.cc/images/series/Genius_Main_Title_1x1.jpeg" style="border:none;padding: 5px;width: 100%;margin-top: 0px;height: 400px;">
+    </div>
+  </div>
+	<div style="background-color:grey;">
+<h1 style="color:orange;background-color:black;">OUR SERVICES</h1>
+<img src="https://unique-genius.com/wp-content/uploads/2023/11/Unique-Genius-Logo-2.png">
+<h1 style="color:orange;">OVERVIEW</h1>
+<p style="font-size:25px;">
+	Key in our job is creation of websites for clients in whatever way they desire
+</p>
+<h1 style="color:orange;">WHAT WE OFFER</h1>
+<p>
+<ul>
+	<li style="font-size:25px;">Full Stack Website Design</li>
+	<li style="font-size:25px;">Backend website design and server-side design</li>
+	<li style="font-size:25px;">Frontend website design</li>
+	<li style="font-size:25px;">Website file design</li>
+    <li style="font-size:25px;">Website domain brokering</li>
+    <li style="font-size:25px;">Graphics design</li>
+</ul>
+</p>
+<p style="font-size:25px;">
+	Find Out Our Pricing Info. at Our Payment tab.
+</p>
+</div>
+<h1 style="color:brown;font-size:25px;">WE ALWAYS PROVIDE QUALITY TO OUR CLIENTS AND WE NEVER DISSAPOINT.<br>PLEASE REACH OUT TO US.</h1>
+</div>
+<div id="pay">
+	<div style="background-color:grey;">
+<h1 style="color:orange;background-color:black;">PRICING INFORMATION</h1>
+<h1 style="color:orange;">FULLSTACK DESIGN</h1>
+<p>
+<ul>
+	<li style="font-size:25px;">Student project design</li>
+	<span style="color:yellow;font-size:25px;">ksh.50,000</span>
+	<li style="font-size:25px;">Company Fullstack website design</li>
+	<span style="color:yellow;font-size:25px;">ksh.70,000</span>
+</ul>
+</p>
+<h1 style="color:orange;">FRONTEND DESIGN</h1>
+<p>
+<ul>
+	<li style="font-size:25px;">Frontend website design</li>
+	<span style="color:yellow;font-size:25px;">ksh.30,000</span>
+	<li style="font-size:25px;">Website file design</li>
+	<span style="color:red;font-size:25px;">ksh.15,000</span>
+</ul>
+</p>
+<ul>	
+    <li style="font-size:25px;">Website domain brokering</li>
+    <span style="color:yellow;font-size:25px;">ksh.5,000 negotiable annual pricing</span>
+    <li style="font-size:25px;">Graphics design</li>
+    <span style="color:yellow;font-size:25px;">Negotiable depending on level of task</span>
+</ul>
+<img style="width:90%" src="https://info.paygenius.co.za/wp-content/uploads/2017/08/paygenius-logo-colour.png">	
+</div>
+</div>
+<div id="testify">
+<div style="background-color:grey;">
+	<h1 style="font-size:30px;">@victormedia</h1>
+<p style="color:yellow;font-size:20px;">
+	I indeed recommend Genius for website designs.These guys know what they are doing<br>
+	They made me a website for my student project on my third year
+</p>
+</div>
+<div style="background-color:grey;">
+	<h1 style="font-size:30px;">@minorityking</h1>
+<p style="color:yellow;font-size:20px;">
+	These guys have really did me good<br>
+	They made me a frontend website for advertising my small business and since then my sales have increased.
+</p>
+</div>
+<div style="background-color:grey;">
+	<h1 style="font-size:30px;">@techad</h1>
+<p style="color:yellow;font-size:20px;">
+	I am glad i now have a server for my website<br>
+	Thanks to Genius...with the best deals
+</p>
+</div>
+<p style="color:blue;background-color:red;">THESE ARE THE FEW AMONG THE TESTIMONIALS AND FEEDBACKS FROM OUR CLIENTS.</p>
+<img style="width:100%" src="https://i.ytimg.com/vi/7ngufvkmkII/maxresdefault.jpg">
+</div>
+<div id="asking">
+<div style="background-color:grey;">
+	<h1 style="font-size:30px;background-color:yellow;">FREQUENTLY ASKED QUERIES</h1>
+<p style="color:white;font-size:25px;">
+<span style="color:#e51aac;background-color:#4223dc">Do we pay before or after the services ?<br></span>
+	<span style="color:#6ff807;">We charge a deposit before the service and the rest is paid after delivery</span>
+	<br><br>
+	<span style="color:#e51aac;background-color:#4223dc">How long has Genius been doing web development ?<br></span>
+	<span style="color:#6ff807;">WE are onto completing our second year of service soon</span>
+	<br><br>
+	<span style="color:#e51aac;background-color:#4223dc">Do you have discounts for frequent customers ?<br></span>
+	<span style="color:#6ff807;">After the third website design for one customer special discounts are offered</span>
+	<br><br>
+	<span style="color:#e51aac;background-color:#4223dc">How long do you take to complete a website ?<br></span>
+	<span style="color:#6ff807;">All tasks are completed within 24 hours depending on the complexity</span>
+</p>
+</div>
+<img style="width:100%;" src="https://cdnblog.etmoney.com/wp-content/uploads/2022/03/Genius-FAQs.jpg">
+</div>
+<div id="phone">
+<div style="background-color:grey;">
+	<h1 style="font-size:30px;background-color:#ffc800;">CONTACT US</h1>
+	<img style="width:30%" src="https://www.kenvisiontechniks.com/wp-content/uploads/2020/02/contact-us1.jpg">
+		<div style="text-align:center;background-color: black;color:white;font-size:20px;">GENIUS<br></div>
+	<div style="background-color:grey;color:blue;font-size:20px;">Need help? Contact us:<br></div>
+	<div style="text-align:left;background-color:silver;color:blue;font-size:20px;"><br></div> <a href="mailto:colkimib@gmail.com">colkimib@gmail.com</a>
+	<div style="text-align:left;background-color:silver;color:blue;font-size:20px;"><br></div> <a href="mailto:charlesmuthomi51@gmail.com">charlesmuthomi51@gmail.com</a>
+ 	<div style="text-align:center;background-color:grey;color:blue;font-size:20px;"><br></div><a href="https://www.facebook.com/colkimi">Facebook:@colkimi</a>
+ 	<div style="background-color:silver;color:blue;font-size:20px;"><br></div><a href="https://www.twitter.com/genius">twitter:@genius</a>
+ 	<div style="text-align:center;background-color:silver;color:blue;font-size:20px;"><br></div> <a href="https://www.instagram.com/Genius">instagram:@genius </a>
+ 	<div style="text-align:left;background-color:grey;color:blue;font-size:20px;"><br></div><a href="https://wa.me/254726075980">whatsapp+254726075980</a>
+ 	<div style="text-align:left;background-color:grey;color:blue;font-size:20px;">Phone:&nbsp&nbsp<a href="tel:+254789471918">+254789471918</a><br></div>
+ 	<div style="text-align:center;background-color:black;color:white;font-size:20px;"></div><br><a href="https://www.tiktok.com/genius">tiktok:@genius</a><hr>
+ 	</div>
+</div>
+</div>
+<div id="aboutus">
+<div style="background-color:#bd1be4;">
+	<h1 style="font-size:30px;background-color:#ffc800;">ABOUT US</h1>
+		<div style="text-align:center;background-color: black;color:white;font-size:20px;">GENIUS</div><br>
+		<div style="text-align:left;background-color: black;color:white;font-size:20px;">We are based on Kirinyaga KENYA</div>
+		<div style="text-align:center;background-color: black;color:white;font-size:20px;"><u>BRAND STORY</u><br>
+		We are a big brand trusted by our clients and we wish to press on to provide the best kind of services expected</div>
+		<div style="text-align:left;background-color: black;color:orange;font-size:20px;">For comments,complaints or suggestions contact us</div>
+	<img style="width: 100%;" src="https://www.holbrookschool.co.uk/_site/data/files/images/news/921C5C266239AB668ED157BC760A9296.jpg">	
+</div>
+</div>
+	<div id="loginFormContainer">
+    <h1 style="color:black;background-color: red;">LOGIN TO GENIUS:</h1>
+    <form id="loginForm" action="http://localhost:3000/loginForm" method="post">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="username" required><br>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+    Don't have an account? <a href="#" onclick="signUpForm()">Create account</a>
+</div>
+<div id="signUpContainer">
+    <h1 style="color:black;background-color: red;">SIGN UP TO GENIUS:</h1>
+    <form id="signupForm" action="http://localhost:3000/signupForm" method="post">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" name="username" required><br>
+
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" name="password" required><br>
+         <div id="password-check" style="color: red;"></div>
+
+        <input type="submit" value="Sign Up">
+    </form>
+    Already have an account? <a href="#" onclick="loginForm()">Login</a>
+</div>
+<script>
+    function signUpForm() {
+        document.getElementById('loginFormContainer').style.display = "none";
+        document.getElementById('signUpContainer').style.display = "block";
+    }
+
+    function loginForm() {
+        document.getElementById('signUpContainer').style.display = "none";
+        document.getElementById('loginFormContainer').style.display = "block";
+    }
+</script>
+    <script>
+        const passwordInput = document.getElementById('signupPassword');
+        const passwordFeedback = document.getElementById('password-check');
+
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let requirementsMet = 0;
+            let errorMessages = [];
+
+            if (password.length < 8) {
+                errorMessages.push('<li style="background-color:black;color:red;">At least 8 characters</li>');
+            }
+
+            if (!/[A-Z]/.test(password)) {
+                errorMessages.push('<li style="background-color:black;color:yellow;">One uppercase letter</li>');
+            }
+
+            if (!/[!@#$%^&*]/.test(password)) {
+                errorMessages.push('<li style="background-color:black;color:orange;">One special character (e.g., !@#$%^&*)</li>');
+            }
+
+            if (requirementsMet === 0) {
+                passwordFeedback.innerHTML = '<p class="text-danger">Password must contain:</p><ul>' + errorMessages.join('') + '</ul>';
+            } else {
+                passwordFeedback.innerHTML = '';
+            }
+        });
+    </script>
+    <script src="vivo.js"></script>
+<div style="text-align:center;color:orange;background-color:brown;font-size:20px;">&copycopyright&nbsp&nbsp@2024<br>Genius
+</body>	
+</html>
